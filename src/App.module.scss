@@ -1,0 +1,126 @@
+:global {
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: helvetica;
+  }
+
+  #root{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+  }
+}
+
+.Header{
+  display: flex;
+  align-items: center;
+  flex: 0 1 auto;
+  height: 74px;
+  padding-left: 30px;
+  background-color: #FAFAFA;
+
+  img{
+    margin: 16px 0;
+    height: 42px;
+    width: 88px;
+  }
+}
+
+.Main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  margin-top: -70px;
+  min-width: 720px;
+
+  .Main__Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+      font-family: helvetica;
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    h3{
+      font-family: helvetica;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .Main__Container__Input{
+      display: flex;
+      flex-direction: column;
+      margin-top: 60px;
+      width: 100%;
+    }
+
+    .Main__Container__ButtonCont{
+      margin-top: 40px;
+      align-self: flex-end;
+      margin-left: 20%;
+
+      /*
+        Library forced the use of important here
+      */
+      .Main__Container__ButtonCont__Button{
+        height: 46px;
+        background-color: #5C7BEB !important;
+        border: 0;
+        color: #FFF;
+        padding: 15px !important;
+      }
+    }
+  }
+}
+
+.Results{
+  color: #3F3E3A;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+
+  .Results__Title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+      font-size: 32px;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    h3{
+      font-size: 20px;
+      font-weight: normal;
+    }
+  }
+
+  .Results__Sort{
+    margin-top: 32px;
+    width: 30%;
+    margin-bottom: 16px;
+  }
+
+  .Results__List{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px
+  }
+
+  .Results__Buttons{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+
+    .Results__Buttons__Button{
+      color: #5C7BEB;
+    }
+  }
+}
